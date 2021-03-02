@@ -11,7 +11,7 @@ import java.net.Socket;
  * 
  * 写三句话：
  * 
- * HTTP 1.1/ 200 OK
+ * HTTP/1.1 200 OK
  * Content-Type: text/html
  * Content-Length: text/html
  * 响应正文

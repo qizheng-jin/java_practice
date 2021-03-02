@@ -17,14 +17,14 @@ public class HttpRequest {
 	private String parsedUri;
 	private	Map<String, String> parameters =new HashMap<String, String>();
 
-	public HttpRequest(Socket socket) {
+	public HttpRequest(Socket socket) throws EmptyRequestException{
 		this.socket = socket;
 		parseLine();
 		parseHeaders();
 		parseContent();
 	}
 	
-	private void parseLine() {
+	private void parseLine() throws EmptyRequestException{
 		try {
 			String line = readLine();
 			String[] data = line.split("\\s");

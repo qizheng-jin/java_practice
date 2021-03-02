@@ -1,0 +1,9 @@
+package cn.tedu.hello;
+
+public class For_loop {
+	public static void main(String[] args) {
+	for(int i=9999; i>=9 ; i=i/10 ) {
+		System.out.println(i);
+	}
+}
+}

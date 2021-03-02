@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>index</title>
+	</head>
+	<body>
+		<center>
+			<h1>This is the index page</h1>
+			<a href="">注册</a>
+			<a href="">登录</a>
+			<img src"../img/pei_qi.jpg" alt="pei_qi">
+		</center>
+	</body>
+</html>

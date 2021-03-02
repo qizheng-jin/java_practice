@@ -5,7 +5,7 @@ import java.net.Socket;
 
 public class ClientHandler implements Runnable{
 	private Socket socket;
-	private static final String defaultPath = "Webapps";
+	private static final String defaultPath = "Webapps/html_files";
 	public ClientHandler(Socket socket) {
 		// TODO Auto-generated constructor stub
 		this.socket = socket;

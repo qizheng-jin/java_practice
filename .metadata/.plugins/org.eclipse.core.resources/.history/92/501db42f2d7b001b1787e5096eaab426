@@ -1,0 +1,11 @@
+package load_static_files;
+
+import java.net.ServerSocket;
+
+public class WebServer {
+	private ServerSocket serverSocket;
+	
+	public WebServer() {
+		
+	}
+}
