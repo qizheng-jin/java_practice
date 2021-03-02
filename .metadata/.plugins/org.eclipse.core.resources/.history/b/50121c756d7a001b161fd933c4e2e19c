@@ -1,0 +1,44 @@
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
+
+/**
+ * 
+ * 这个类目前只干三件事：
+ * 1.	发送Content-Type = text/html
+ * 2.	发送Content-Length
+ * 3.	发送响应正文
+ *
+ */
+public class HttpResponse{
+	private Socket socket;
+	public HttpResponse(Socket socket) {
+		// TODO Auto-generated constructor stub
+		this.socket = socket;
+	}
+	
+	private void flush() {
+		
+	}
+	
+	private void sendResponseLine() {
+		
+	}
+	
+	private void sendResonpseHeaders() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private void sendContent() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private void writeIntoSocket(String line) throws IOException {
+		OutputStream out = socket.getOutputStream();
+		//将line转化为byte[]然后进行写入操作.
+		line = 
+		
+	}
+}

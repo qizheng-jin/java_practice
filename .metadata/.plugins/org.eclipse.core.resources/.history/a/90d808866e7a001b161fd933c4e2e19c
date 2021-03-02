@@ -1,0 +1,53 @@
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
+
+/**
+ * 
+ * 这个类目前只干四件事：
+ * 1.	发送HTTP/1.1	statusCode statusReason
+ * 2.	发送Content-Type = text/html
+ * 3.	发送Content-Length
+ * 4.	发送响应正文
+ *
+ */
+public class HttpResponse{
+	private Socket socket;
+	private int statusCode = 200;
+	private String statusReason = "OK";
+	public HttpResponse(Socket socket) {
+		// TODO Auto-generated constructor stub
+		this.socket = socket;
+	}
+	
+	private void flush() {
+		
+	}
+	
+	/*
+	 * 发送HTTP/1.1	200	OK
+	 */
+	private void sendResponseLine() {
+		String line = "HTTP/1.1 " + statusCode + statusReason;
+		
+	}
+	
+	private void sendResonpseHeaders() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private void sendContent() {
+		// TODO Auto-generated method stub
+
+	}
+	
+	private void writeIntoSocket(String line) throws IOException {
+		OutputStream out = socket.getOutputStream();
+		//将line转化为byte[]然后进行写入操作.
+		byte[] data = line.getBytes("ISO8859-1");
+		out.write(data);
+		out.write(13);
+		out.write(10);
+	}
+}

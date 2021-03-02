@@ -1,0 +1,29 @@
+package httpresponse;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class WebServer {
+	private ServerSocket serverSocket;
+
+	public WebServer() {
+		try {
+			serverSocket = new ServerSocket(8088);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	public void start() {
+		try {
+			Socket socket = serverSocket.accept();
+			CientHandler handler = new ClientHandler(socket);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+}

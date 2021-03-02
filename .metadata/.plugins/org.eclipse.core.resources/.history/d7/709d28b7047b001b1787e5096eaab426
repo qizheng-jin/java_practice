@@ -1,0 +1,15 @@
+package cn.tedu.hello;
+
+public class TestDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 1;
+		System.out.println(a++); //先打印在自减
+		System.out.println(a); //先自减在打印
+		int b = 1;
+		System.out.println(--b);
+		System.out.println(b);
+	}
+
+}

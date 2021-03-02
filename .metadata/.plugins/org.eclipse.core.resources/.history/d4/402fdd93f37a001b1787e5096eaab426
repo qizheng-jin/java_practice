@@ -1,0 +1,5 @@
+package httpresponse;
+
+public class HttpResponse {
+
+}

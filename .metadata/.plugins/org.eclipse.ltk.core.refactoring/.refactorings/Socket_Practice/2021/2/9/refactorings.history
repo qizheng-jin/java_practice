@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;parameter&apos; in &apos;HttpRequest&apos; to &apos;parsedContent&apos;&#x0D;&#x0A;- Original project: &apos;Day1&apos;&#x0D;&#x0A;- Original element: &apos;HttpRequest.parameter&apos;&#x0D;&#x0A;- Renamed element: &apos;HttpRequest.parsedContent&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;parameter&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;{HttpRequest.java[HttpRequest^parameter" name="parsedContent" references="true" setter="false" stamp="1614323961187" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,38 @@
+package httpresponse;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.Socket;
+
+public class HttpRequest {
+	private Socket socket;
+
+	public HttpRequest(Socket socket) {
+		this.socket = socket;
+	}
+	
+	private void parseLine() {
+		try {
+			String line = readLine();
+			String[] data = line.split("\\s");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private String readLine() throws IOException {
+		StringBuilder builder = new StringBuilder();
+		char cur = ' ';
+		char pre = ' ';
+		int d;
+		InputStream in = socket.getInputStream();
+		while((d=in.read())!=-1) {
+			cur = (char)d;
+			if(pre==13 && cur==10) break;
+			builder.append(cur);
+			pre = cur;
+		}
+		return builder.toString().trim();
+	}
+}

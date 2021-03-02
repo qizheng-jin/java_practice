@@ -1,0 +1,34 @@
+package httpresponse;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.OutputStream;
+import java.net.Socket;
+
+/**
+ * 
+ * 写三句话：
+ * 
+ * HTTP1.1/ 200 OK
+ * Content-Type: text/html
+ * Content-Length: text/html
+ * 响应正文
+ *
+ */
+public class HttpResponse {
+	private Socket socket;
+	private File entity;
+	
+	public HttpResponse(Socket socket) {
+		super();
+		this.socket = socket;
+	}
+	
+	
+	
+	private void writeIntoSocket(String line) {
+		 
+	}
+}

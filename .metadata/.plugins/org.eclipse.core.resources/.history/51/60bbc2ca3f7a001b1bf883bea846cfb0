@@ -1,0 +1,10 @@
+
+public class examine {
+	public static void main(String[] args) {
+		String s = "我是谁?你好";
+		if(s.contains("?")) System.out.println(s);
+		
+		String[] data = s.split("是");
+		System.out.println(data[0] + data[1]);
+	}
+}

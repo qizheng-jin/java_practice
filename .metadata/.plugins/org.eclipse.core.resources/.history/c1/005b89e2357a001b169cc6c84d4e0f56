@@ -1,0 +1,10 @@
+import java.net.Socket;
+
+public class test {
+	private Socket socket;
+	
+	public test(Socket socket) {
+		super();
+		this.socket = socket;
+	}
+}

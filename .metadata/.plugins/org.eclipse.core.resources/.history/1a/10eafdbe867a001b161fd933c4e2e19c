@@ -1,0 +1,83 @@
+package httpresponse;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+
+public class HttpRequest {
+	private Socket socket;
+	private String method;
+	private String uri;
+	private String protocol;
+	private Map<String, String> headers = new HashMap<String, String>();
+	private String parsedUri;
+	private	Map<String, String> parameters =new HashMap<String, String>();
+
+	public HttpRequest(Socket socket) {
+		this.socket = socket;
+	}
+	
+	private void parseLine() {
+		try {
+			String line = readLine();
+			String[] data = line.split("\\s");
+			method = data[0];
+			uri = data[1];
+			protocol =data[1];
+			parseUri();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+	
+	private void parseHeaders() {
+		while(true) {
+			try {
+				String line = readLine();
+				if(line.isEmpty()) break;
+				String[] data = line.split(":");
+				headers.put(data[0], data[1]);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	private void parseUri() {
+		//看看uri里面有没有?
+		if(uri.contains("?")) {
+			String[] data = uri.split("\\?");
+			parsedUri = data[0];
+			if(data.length > 1) {
+				String paraLine = data[1];
+			}
+		}
+	}
+	
+	private void parseParameters(String line) {
+		String[] data = line.split("&");
+		for(String str:data) {
+			String[] paraList = str.split("=");
+			parameters.put(data[0], data[1]);
+		}
+	}
+	
+	private String readLine() throws IOException {
+		StringBuilder builder = new StringBuilder();
+		char cur = ' ';
+		char pre = ' ';
+		int d;
+		InputStream in = socket.getInputStream();
+		while((d=in.read())!=-1) {
+			cur = (char)d;
+			if(pre==13 && cur==10) break;
+			builder.append(cur);
+			pre = cur;
+		}
+		return builder.toString().trim();
+	}
+}

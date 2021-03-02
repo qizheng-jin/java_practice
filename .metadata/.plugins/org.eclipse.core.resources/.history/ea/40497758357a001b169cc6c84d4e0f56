@@ -1,0 +1,30 @@
+package day2;
+
+/**
+ * 
+ * 标识符可以由字母、数字、下划线、美元符组成，但是不能包含@、%、空格等
+ * 其它特殊字符。
+ * 不能以数字开头
+ * 严格区分大小写
+ * 标识符不能是java关键字
+ *
+ */
+
+/**
+ * 
+ * 
+ *
+ */
+
+
+
+
+public class Day2_biao_shi_fu {
+
+	
+	  public static void main(String[] args) {
+		  System.out.println("胡哥nb.");
+	  }
+	 
+
+}

@@ -1,0 +1,59 @@
+package day2;
+
+/**
+ * 
+ * 标识符可以由字母、数字、下划线、美元符组成，但是不能包含@、%、空格等
+ * 其它特殊字符。
+ * 不能以数字开头
+ * 严格区分大小写
+ * 标识符不能是java关键字
+ *
+ */
+
+/**
+ * eclipse快捷键一览:
+ * 建立构造函数/getters/setters: alt + shift + s
+ * 运行java: ctrl + F11
+ * 快速打出System.out.println(); : sout + alt + /
+ * 快速导入包: ctrl + shift + m.
+ * 快速删除一行： ctrl + d
+ * 快速选中一行 ： 删除加返回上一步
+ * 
+ */
+
+
+
+
+public class Day2_biao_shi_fu {
+	
+	
+	  public static void main(String[] args) {
+		  System.out.println("曼城天下第一!");
+		  String name = "德布劳内";
+		  int age = 30;
+		  double salary = 10000;
+		  
+		  System.out.println("他叫" + name + ", 他" + age + "岁" +
+				  			"他的薪资是" + salary + "磅/每天");
+		  
+		  System.out.println("byte最大值是" + Byte.MAX_VALUE);
+		  System.out.println("byte最小值是" + Byte.MIN_VALUE);
+		  System.out.println("short最大值是" + Short.MAX_VALUE);
+		  System.out.println("short最大值是" + Short.MIN_VALUE);
+		  System.out.println("long最大值是" + Long.MAX_VALUE);
+		  System.out.println("long最大值是" + Long.MIN_VALUE);
+		  System.out.println("double最大值是" + Double.MAX_VALUE);
+		  System.out.println("double最大值是" + Double.MIN_VALUE);
+		  
+		  //char类型可以保存单个字符
+		//char类型会保存数字,会去查ASCII码表
+		//ASCII码表只用了0-127  
+		  char a = 123; 
+		  char b = '好';
+		  char c = 'a';
+		  char d = '*';
+		  System.out.println(a);//会输出ASCII码中123对应字符
+	  }
+	 
+
+}
