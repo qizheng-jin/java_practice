@@ -7,6 +7,16 @@ public class Extend_text {
 	}
 }
 
+/**
+ * 
+ * 两同两小一大
+ * 方法名,参数列表相同
+ * 子类返回类型小于等于父类返回类型
+ * 子类抛出异常小于等于父类抛出异常
+ * 大:子类权限一定要大于等于父类
+ *
+ */
+
 class Father{
 	String s;
 	public Father() {
