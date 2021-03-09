@@ -1,0 +1,22 @@
+
+public class First_java {
+	/**
+	 * 
+	 * ц╟ещеепР
+	 */
+	public void bubbleSort(int[] a) {
+		
+	}
+	
+	
+	/**
+	 * 
+	 * 
+	 */
+	public static void main(String[] args) {
+		First_java fj = new First_java();
+		int[] a = {3,6,88,1,4,25,13,64,67,83,42,4,7,98};
+		fj.bubbleSort(a);
+		
+	}
+}

@@ -1,9 +1,0 @@
-import java.net.Socket;
-
-public class ClientHandler {
-
-	public ClientHandler(Socket socket) implements Runnable{
-		// TODO Auto-generated constructor stub
-	}
-
-}

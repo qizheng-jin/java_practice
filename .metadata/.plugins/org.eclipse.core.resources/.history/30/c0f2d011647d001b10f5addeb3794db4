@@ -1,0 +1,79 @@
+package day5;
+
+import java.util.Arrays;
+
+public class Sort_array {
+	/**
+	 * √∞≈›≈≈–Ú
+	 */
+	public int[] bubbleSort(int[] a) {
+		for(int i=1; i<a.length; i++) {
+			for(int j=0; j<a.length-i; j++) {
+				if(a[j] > a[j+1]) {
+					int temp = a[j];
+					a[j] = a[j+1];
+					a[j+1] = temp;
+				}
+			}
+		}
+		return a;
+	}
+	
+	/**
+	 * √∞≈›≈≈–Úµ›πÈ∑Ω∑®
+	 * @param args
+	 */
+	public int[] bubbleRecursion(int[] a, int i) {
+		if(i>=0) {
+			for(int j=0; j<a.length-1; j++) {
+				if(a[j] > a[j+1]) {
+					int temp = a[j];
+					a[j] = a[j+1];
+					a[j+1] = temp;
+				}
+			}
+			bubbleRecursion(a, i-1);
+		}
+		return a;
+	}
+	
+	/**
+	 * 
+	 * øÏÀŸ≈≈–Ú,µ›πÈ∑Ω∑®
+	 */
+	
+	private int quickSort(int[] a, int l, int r) {
+		int thisInt = a[l];
+		while(l<r) {
+			while(l<r && thisInt <= a[r]) r--;
+			if(l<r && thisInt > a[r]) {
+				a[l] = a[r];
+				l++;
+			}
+			
+			while(l<r && thisInt >= a[l]) l++;
+			if(l<r && thisInt < a[l]) {
+				a[r] = a[l];
+				r--;
+			}
+		}
+		a[l] = thisInt;
+		return l;
+	}
+	
+	public int[] quickSortArray(int[] a, int l, int r) {
+		if(l<r) {
+			int i = quickSort(a, l, r);
+			quickSortArray(a, l, i-1);
+			quickSortArray(a, i+1, r);
+		}
+		return a;
+	}
+	
+	
+	public static void main(String[] args) {
+		Sort_array sa = new Sort_array();
+		int[] a = {5, 4, 3, 2, 1};
+		System.out.println(Arrays.toString(sa.bubbleRecursion(a, a.length)));
+	}
+}

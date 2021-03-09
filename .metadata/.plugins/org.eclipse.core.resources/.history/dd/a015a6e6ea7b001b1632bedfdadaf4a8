@@ -1,0 +1,16 @@
+package day4;
+
+import java.util.Scanner;
+
+public class Continue_Break_Return {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("ÊäÈëÄãµÄÊı×Ö");
+		Scanner in = new Scanner(System.in);
+		int rightNum = (int)Math.random()*10;
+		while(true)
+			
+	}
+
+}

@@ -20,6 +20,7 @@ import java.util.Scanner;
  * 快速导入包: ctrl + shift + m.
  * 快速删除一行： ctrl + d
  * 快速选中一行 ： 删除加返回上一步
+ * 快速纠错： ctrl + 数字1;
  * 
  */
 

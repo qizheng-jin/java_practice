@@ -1,0 +1,52 @@
+package load_static_files;
+
+import java.io.File;
+import java.net.Socket;
+import java.util.HashMap;
+import java.util.Map;
+
+public class ClientHandler implements Runnable{
+	private Socket socket;
+	private final static String defaultPath = "Webapps/html_files";
+	public ClientHandler(Socket socket) {
+		// TODO Auto-generated constructor stub
+		this.socket = socket;
+	}
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		HttpRequest request = new HttpRequest(socket);
+		HttpResponse response = new HttpResponse(socket);
+		String path = request.getParsedUri();
+		File file = new File(defaultPath + path);
+		System.out.println(file.getAbsolutePath());
+		if(file.exists()&&file.isFile()) {
+			System.out.println("找到了目标文件");
+            Map<String,String> mimeMapping = new HashMap<>();
+            mimeMapping.put("html","text/html");
+            mimeMapping.put("css","text/css");
+            mimeMapping.put("js","application/javascript");
+            mimeMapping.put("png","image/png");
+            mimeMapping.put("gif","image/gif");
+            mimeMapping.put("jpg","image/jpeg");
+            //ios.png
+            String fileName = file.getName();
+            String ext = fileName.substring(fileName.lastIndexOf(".")+1); //获得资源后缀
+            System.out.println("***************ext is " + ext);
+            String type = mimeMapping.get(ext);
+            response.putHeaders("Content-Type",type);
+            response.putHeaders("Content-Length",file.length()+"");
+            response.setEntity(file);
+			
+		}else {
+			System.out.println("没找到目标文件");
+			response.setStatusCode(404);
+			response.setStatusReason("404 NOT FOUND");
+			path = "/404_not_found.html";
+		}
+		file = new File(defaultPath + path);
+		response.setEntity(file);
+		response.flush();
+	}
+
+}
