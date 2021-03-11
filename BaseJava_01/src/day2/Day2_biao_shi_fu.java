@@ -21,6 +21,7 @@ import java.util.Scanner;
  * 快速删除一行： ctrl + d
  * 快速选中一行 ： 删除加返回上一步
  * 快速纠错： ctrl + 数字1;
+ * 查看类继承的快捷键: ctrl + T;
  * 
  */
 

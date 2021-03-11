@@ -1,5 +1,0 @@
-package httpresponse;
-
-public class EmptyRequestException {
-
-}
