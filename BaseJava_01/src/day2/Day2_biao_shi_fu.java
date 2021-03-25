@@ -22,7 +22,9 @@ import java.util.Scanner;
  * 快速选中一行 ： 删除加返回上一步
  * 快速纠错： ctrl + 数字1;
  * 查看类继承的快捷键: ctrl + T;
- * 
+ * 自动储存变量地址: 写好new的对象 然后按 alt + shift + L;
+ * 整理代码格式: CTRL+i;
+ * 代码向上移动: ALT + 方向键上
  */
 
 
