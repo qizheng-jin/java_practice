@@ -10,7 +10,7 @@ package day6;
    this()和super()都指的是对象，所以，均不可以在static环境中使用。包括：static变量,static方法，static语句块。
    从本质上讲，this是一个指向本对象的指针, 然而super是一个Java关键字。
  */
-public class test {
+public class test{
 	public static void main(String[] args) {
 		B b = new B("你好");
 		A a = new A("我不好");
