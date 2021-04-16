@@ -18,7 +18,6 @@ import org.junit.jupiter.api.Test;
  * 
 */
 public class Test_Reflection {
-	 
 	@Test
 	public void getClazz() throws Exception {
 		//2. 选中要复制的Class名， 右键选择: copy qualified name

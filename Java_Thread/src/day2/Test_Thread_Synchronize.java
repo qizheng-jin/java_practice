@@ -74,13 +74,13 @@ public class Test_Thread_Synchronize implements Runnable{
 //		thread4.start();
 		
 		/**用线程池ExecutorService: 创建线程*/
-		ExecutorService pool  =  Executors.newFixedThreadPool(5);
-		for(int i=0; i<5; i++) {
-			//.execute(Runnable r)每次找线程池的一个线程来执行run()方法.
-			pool.execute(tts);
-		}
-		//关闭线程池子,要不然程序会一直不结束
-		pool.shutdown();
+//		ExecutorService pool  =  Executors.newFixedThreadPool(5);
+//		for(int i=0; i<5; i++) {
+//			//.execute(Runnable r)每次找线程池的一个线程来执行run()方法.
+//			pool.execute(tts);
+//		}
+//		//关闭线程池子,要不然程序会一直不结束
+//		pool.shutdown();
 	}
 }
 
