@@ -33,7 +33,7 @@
 		<item key="OmitCallToSuper" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateConstructorUsingFieldsSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="393"/>
+		<item key="DIALOG_X_ORIGIN" value="392"/>
 		<item key="DIALOG_Y_ORIGIN" value="30"/>
 		<item key="DIALOG_WIDTH" value="574"/>
 		<item key="DIALOG_HEIGHT" value="749"/>
@@ -76,7 +76,7 @@
 		<item key="RemoveFinal" value="false"/>
 	</section>
 	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
-		<item key="DIALOG_X_ORIGIN" value="380"/>
+		<item key="DIALOG_X_ORIGIN" value="379"/>
 		<item key="DIALOG_Y_ORIGIN" value="17"/>
 		<item key="DIALOG_WIDTH" value="587"/>
 		<item key="DIALOG_HEIGHT" value="767"/>
@@ -111,7 +111,7 @@
 		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 	<section name="DialogBounds_GenerateToStringDialog">
-		<item key="DIALOG_X_ORIGIN" value="710"/>
+		<item key="DIALOG_X_ORIGIN" value="450"/>
 		<item key="DIALOG_Y_ORIGIN" value="22"/>
 		<item key="DIALOG_WIDTH" value="516"/>
 		<item key="DIALOG_HEIGHT" value="759"/>

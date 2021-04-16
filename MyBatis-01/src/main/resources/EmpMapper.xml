@@ -7,7 +7,7 @@
   不同Mapper文件的namespace值应该保证唯一
   在程序中通过[ namespace + id ]定位到要执行哪一条SQL语句
  -->
-<mapper namespace="">
+<mapper namespace="EmpMapper">
     <!-- 通过select、insert、update、delete标签声明要执行的SQL -->
   <!-- 练习1: 查询emp表中的所有员工信息
     resultType指定查询的结果将会封装到什么类型中
@@ -16,5 +16,15 @@
   <select id="findAll" resultType="MyBatis.Emp">
   	select * from emp;
   </select>
-  
+  <update id="insert">
+  	insert into emp value(null, '赵云', '保安', 6000);
+  </update>
+  <select id="selectById" resultType="MyBatis.Emp">
+  	select *
+  	from emp
+  	where id=#{id};
+  </select>
+  <update id="delete">
+  	delete from emp where name=#{name};
+  </update>
 </mapper>

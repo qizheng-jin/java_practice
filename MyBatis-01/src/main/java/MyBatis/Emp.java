@@ -5,6 +5,9 @@ public class Emp {
 	String name;
 	String job;
 	double salary;
+	public Emp() {
+		
+	}
 	public Emp(int id, String name, String job, double salary) {
 		super();
 		this.id = id;
